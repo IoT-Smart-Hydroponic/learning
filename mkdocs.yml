@@ -1,4 +1,7 @@
 site_name: "AIoT Learning Hub"
+site_url: https://iot-smart-hydroponic.github.io/learning/
+use_directory_urls: false
+
 theme:
   name: material
   palette:
