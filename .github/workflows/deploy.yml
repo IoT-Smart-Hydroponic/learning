@@ -2,7 +2,7 @@ name: Deploy Docs
 
 on:
   workflow_run:
-    workflows: ["Release"]
+    workflows: ["Continuous Delivery"]
     types:
       - completed
     branches:
@@ -16,6 +16,7 @@ permissions:
 
 jobs:
   build-docs:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -47,6 +48,7 @@ jobs:
     
   deploy:
     needs: build-docs
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
