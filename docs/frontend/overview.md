@@ -1,6 +1,6 @@
-# How to contribute
+# Frontend Development
 
 !!! info "Coming Soon"
     Modul ini sedang disusun. Nantikan update selanjutnya! 🚀
 
-    [Kembali ke Home](./index.md)
+    [Kembali ke Home](../index.md)

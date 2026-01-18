@@ -1,6 +1,8 @@
 site_name: "AIoT Learning Hub"
 site_url: https://iot-smart-hydroponic.github.io/learning/
 use_directory_urls: false
+repo_name: "IoT-Smart-Hydroponic/learning"
+repo_url: https://github.com/IoT-Smart-Hydroponic/learning
 
 theme:
   name: material
@@ -8,16 +10,50 @@ theme:
     - scheme: default # Light mode
       primary: indigo
       accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
     - scheme: slate # Dark mode
       primary: indigo
       accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
   features:
     - navigation.tabs   # Modern top-tab navigation
     - search.suggest    # Auto-suggest in search bar
+    - content.code.copy
+  icon:
+    admonition:
+      note: octicons/tag-16
+      abstract: octicons/checklist-16
+      info: octicons/info-16
+      tip: octicons/squirrel-16
+      success: octicons/check-16
+      question: octicons/question-16
+      warning: octicons/alert-16
+      failure: octicons/x-circle-16
+      danger: octicons/zap-16
+      bug: octicons/bug-16
+      example: octicons/beaker-16
+      quote: octicons/quote-16
 
 nav:
   - Home: index.md
-  - Guide: guide.md
+  - IoT:
+      - Overview: iot/overview.md
+  - Protocol:
+      - Overview: protocol/overview.md
+  - Backend:
+      - Overview: backend/overview.md
+  - Frontend:
+      - Overview: frontend/overview.md
+  - Database:
+      - Overview: database/overview.md
+  - AI:
+      - Overview: ai/overview.md
+  - Deployment:
+      - Overview: deployment/overview.md
 
 markdown_extensions:
   - pymdownx.superfences:
@@ -25,3 +61,14 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - toc:
+      permalink: true
