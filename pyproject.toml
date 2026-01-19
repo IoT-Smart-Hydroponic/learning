@@ -15,13 +15,19 @@ dev = [
 
 [tool.semantic_release]
 version_toml = ["pyproject.toml:project.version"]
+commit_parser = "conventional"
 upload_to_release = true
 upload_to_pypi = false
 changelog_file = "CHANGELOG.md"
+build_command = """
+    uv lock --upgrade-package "$PACKAGE_NAME"
+    git add uv.lock
+"""
 
 [tool.semantic_release.commit_parser_options]
-allowed_types = ["build", "chore", "ci", "docs", "feat", "fix", "perf", "style", "refactor", "test"]
-patch_types = ["fix", "perf", "docs"]
+allowed_tags = ["build", "chore", "ci", "docs", "feat", "fix", "perf", "style", "refactor", "test"]
+minor_tags = ["feat"]
+patch_tags = ["fix", "perf", "docs", "style", "refactor"]
 
 [tool.semantic_release.changelog]
 exclude_commit_patterns = [
