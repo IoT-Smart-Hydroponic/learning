@@ -23,6 +23,7 @@ theme:
     - navigation.tabs   # Modern top-tab navigation
     - search.suggest    # Auto-suggest in search bar
     - content.code.copy
+    - content.footnote.tooltips
   icon:
     admonition:
       note: octicons/tag-16
@@ -46,7 +47,11 @@ nav:
       - Overview: protocol/overview.md
   - Version Control:
       - Overview: version-control/overview.md
-      - Git Basics: version-control/git-basics.md
+      - Git Introduction: version-control/git-introduction.md
+      - Git Installation: version-control/git-installation.md
+      - Basic Git Commands: version-control/basic-git-commands.md
+      - Konsep Branching: version-control/branching-concepts.md
+      - Remote Repositories: version-control/remote-repositories.md
   - Backend:
       - Overview: backend/overview.md
   - Frontend:
@@ -76,3 +81,4 @@ markdown_extensions:
   - pymdownx.snippets
   - toc:
       permalink: true
+  - footnotes
