@@ -44,6 +44,9 @@ nav:
       - Overview: iot/overview.md
   - Protocol:
       - Overview: protocol/overview.md
+  - Version Control:
+      - Overview: version-control/overview.md
+      - Git Basics: version-control/git-basics.md
   - Backend:
       - Overview: backend/overview.md
   - Frontend:
@@ -54,6 +57,7 @@ nav:
       - Overview: ai/overview.md
   - Deployment:
       - Overview: deployment/overview.md
+  - Contribute: guide.md
 
 markdown_extensions:
   - pymdownx.superfences:
