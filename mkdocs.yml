@@ -82,3 +82,6 @@ markdown_extensions:
   - toc:
       permalink: true
   - footnotes
+
+extra_javascript:
+  - utils/mermaid-icons.mjs
