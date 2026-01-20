@@ -58,6 +58,19 @@ Setelah konfigurasi awal selesai, kita bisa mulai menggunakan beberapa perintah 
     git commit -m "Pesan commit kamu"
     ```
 
+    !!! tips "Kombinasi Perintah"
+        Kamu juga bisa menggabungkan perintah `git add` dan `git commit` menjadi satu langkah dengan menggunakan opsi `-a` pada perintah commit jika status file berada pada mode `modified`:
+
+    ```bash
+    git commit -a -m "Pesan commit kamu"
+    ```
+
+    atau
+
+    ```bash
+    git commit -am "Pesan commit kamu"
+    ```
+
 4. **Melihat Status Repository**
 
     Untuk melihat status repository, termasuk file yang telah diubah dan belum di-commit, gunakan perintah:
@@ -74,7 +87,88 @@ Setelah konfigurasi awal selesai, kita bisa mulai menggunakan beberapa perintah 
     git log
     ```
 
-Itu adalah beberapa perintah dasar Git yang sering digunakan. Pada modul selanjutnya, kita akan membahas perintah Git yang lebih lanjut dan konsep-konsep penting lainnya dalam pengelolaan versi kode sumber.
+## Bekerja dengan Repository remote
+
+1. **Clone Repository**
+
+    Untuk menyalin (clone) repository dari remote server ke lokal, gunakan perintah:
+
+    ```bash
+    git clone <url_repository>
+    ```
+
+2. **Menambahkan Remote Repository**
+
+    Untuk menambahkan remote repository ke repository lokal, gunakan perintah:
+
+    ```bash
+    git remote add origin <url_repository>
+    ```
+
+    Biasanya `origin` adalah nama default untuk remote repository utama. Pada saat melakukan `clone`, Git secara otomatis menambahkan remote dengan nama `origin`.
+
+3. **Melakukan Push ke Remote Repository**
+
+    Setelah melakukan commit di repository lokal, kamu bisa mengirimkan perubahan tersebut ke remote repository dengan perintah:
+
+    ```bash
+    git push origin <nama_cabang>
+    ```
+
+    Contoh untuk mengirimkan perubahan ke cabang utama (main/master):
+
+    ```bash
+    git push origin main
+    ```
+
+    !!! tips "Push Pertama Kali"
+        Jika ini adalah kali pertama kamu melakukan push ke remote repository, kamu mungkin perlu mengatur upstream branch dengan perintah:
+
+    ```bash
+    git push -u origin main
+    ```
+
+4. **Melakukan Pull dari Remote Repository**
+
+    Untuk mengambil perubahan terbaru dari remote repository dan menggabungkannya ke repository lokal, gunakan perintah:
+
+    ```bash
+    git pull origin <nama_cabang>
+    ```
+
+    Contoh untuk mengambil perubahan dari cabang utama (main/master):
+
+    ```bash
+    git pull origin main
+    ```
+
+## Mengatur `git log`
+
+Kamu bisa mengatur tampilan `git log` agar lebih informatif dan mudah dibaca dengan menggunakan beberapa opsi berikut:
+
+- Menampilkan log dalam format satu baris per commit:
+
+    ```bash
+    git log --oneline
+    ```
+
+- Menampilkan grafik cabang dan merge:
+
+    ```bash
+    git log --all --graph --decorate --oneline
+    ```
+
+Membuat alias untuk perintah `git log` yang sering digunakan:
+
+```bash
+git config --global alias.graph "log --all --graph --decorate --oneline"
+```
+
+atau
+
+```bash
+git config --global alias.graph "!git log --all --graph --decorate --oneline"
+```
 
 ## Alur Penggunaan Git
 
@@ -92,7 +186,7 @@ graph TD
     
     Commit --> More{Mofifikasi lagi?}
     More -- Ya --> Coding
-    More -- Tidak --> Log[git log]
+    More -- Tidak --> Log[git log / git graph]
     
     Log --> Selesai((Selesai))
 ```
@@ -116,7 +210,7 @@ sequenceDiagram
     Dev->>LR: git commit -m "Pesan commit"
     Dev->>LR: git status
     LR-->>Dev: Status file (untracked/staged/committed)
-    Dev->>LR: git log
+    Dev->>LR: git log / git graph
     LR-->>Dev: Riwayat commit
 ```
 
