@@ -87,6 +87,20 @@ Setelah konfigurasi awal selesai, kita bisa mulai menggunakan beberapa perintah 
     git log
     ```
 
+## Berpindah riwayat commit
+
+Untuk berpindah ke commit tertentu dalam riwayat, kamu bisa menggunakan perintah:
+
+```bash
+git checkout <hash_commit>
+```
+
+Dan untuk kembali ke cabang utama (main/master), gunakan perintah:
+
+```bash
+git checkout <main / master>
+```
+
 ## Bekerja dengan Repository remote
 
 1. **Clone Repository**
@@ -213,5 +227,3 @@ sequenceDiagram
     Dev->>LR: git log / git graph
     LR-->>Dev: Riwayat commit
 ```
-
-
