@@ -53,7 +53,8 @@ nav:
       - Git Installation: version-control/git-installation.md
       - Basic Git Commands: version-control/basic-git-commands.md
       - Konsep Branching: version-control/branching-concepts.md
-      - Remote Repositories: version-control/remote-repositories.md
+      - Git Conflicts: version-control/git-conflict.md
+      - Remote Repositories: version-control/remote-repositories.md  
   - Backend:
       - Overview: backend/overview.md
   - Frontend:
