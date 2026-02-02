@@ -43,6 +43,8 @@ nav:
   - Home: index.md
   - IoT:
       - Overview: iot/overview.md
+      - Sensors: iot/sensors.md
+      - Hands on: iot/hands-on.md
   - Protocol:
       - Overview: protocol/overview.md
   - Version Control:
