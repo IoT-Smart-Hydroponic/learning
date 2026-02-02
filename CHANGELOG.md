@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v1.4.0 (2026-02-02)
+
+### Features
+
+- Complete navigation for IoT sensors and Git conflict sections
+  ([#9](https://github.com/IoT-Smart-Hydroponic/learning/pull/9),
+  [`48b57d8`](https://github.com/IoT-Smart-Hydroponic/learning/commit/48b57d8d67693fc98330fb612e44cdfdbf100ecd))
+
+
 ## v1.3.0 (2026-01-27)
 
 ### Features
