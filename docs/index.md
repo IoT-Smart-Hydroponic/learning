@@ -6,6 +6,7 @@ Repositori: [Repo belajar](https://github.com/IoT-Smart-Hydroponic/learning)
 
 ## Daftar Isi
 
+- [Getting Started](getting-started/overview.md)
 - [Internet of Things (IoT)](iot/overview.md)
 - [Protocol](protocol/overview.md)
 - [Version Control](version-control/overview.md)

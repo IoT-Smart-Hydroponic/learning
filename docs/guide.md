@@ -19,6 +19,7 @@ Untuk berkontribusi pada dokumentasi ini, diharapkan kamu memiliki pemahaman das
     ```
 
 4. Lakukan perubahan pada file dokumentasi sesuai kebutuhan.
+
 5. Setelah selesai, commit perubahan tersebut dengan pesan yang jelas.
 
     ```bash
