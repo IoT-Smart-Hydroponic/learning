@@ -41,6 +41,9 @@ theme:
 
 nav:
   - Home: index.md
+  - Getting Started: 
+      - Overview: getting-started/overview.md
+      - Installation Tools: getting-started/arduino-ide.md
   - IoT:
       - Overview: iot/overview.md
       - Sensors: iot/sensors.md
