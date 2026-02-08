@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v1.5.1 (2026-02-08)
+
+### Bug Fixes
+
+- Edit getting started docs ([#11](https://github.com/IoT-Smart-Hydroponic/learning/pull/11),
+  [`0a4570c`](https://github.com/IoT-Smart-Hydroponic/learning/commit/0a4570c7b5827d8680b1448fff0643ec745508c3))
+
+
 ## v1.5.0 (2026-02-08)
 
 ### Features
