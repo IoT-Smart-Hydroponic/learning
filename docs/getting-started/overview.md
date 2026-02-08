@@ -4,5 +4,5 @@ Untuk memulai pembelajaran khususnya secara praktis, diperlukan persiapan tools/
 
 Berikut beberapa *software* yang digunakan:
 
-- [Arduino IDE](getting-started/arduino-ide.md)
+- [Arduino IDE](arduino-ide.md)
 - [Visual Studio Code](https://code.visualstudio.com/)

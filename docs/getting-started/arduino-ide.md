@@ -24,7 +24,9 @@ Berikut proses instalasi aplikasi beserta konfigurasi hingga aplikasi siap digun
 
 Untuk melakukan konfigurasi disesuaikan dengan penggunaan jenis mikrokontroler yang akan digunakan.
 
-> **Note!** Dalam *case* ini diberikan contoh instalasi module pada mikrokontroler ESP32.
+!!! warning
+
+    Note Dalam *case* ini diberikan contoh instalasi module pada mikrokontroler ESP32.
 
 1. **Buka** bagian BOARDS MANAGER → search "esp32". Kemudian **install** module **ESP32 oleh Espressif Systems**.
 
