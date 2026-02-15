@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v1.6.0 (2026-02-15)
+
+### Features
+
+- Add microcontrollers, sensors, actuators, and hands-on page (Week 3)
+  ([#12](https://github.com/IoT-Smart-Hydroponic/learning/pull/12),
+  [`d137620`](https://github.com/IoT-Smart-Hydroponic/learning/commit/d137620dae490c0ef5d151589805a775649a771e))
+
+
 ## v1.5.1 (2026-02-08)
 
 ### Bug Fixes
