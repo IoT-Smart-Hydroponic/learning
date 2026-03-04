@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v1.7.0 (2026-03-04)
+
+### Features
+
+- File management and new hands-on section
+  ([#13](https://github.com/IoT-Smart-Hydroponic/learning/pull/13),
+  [`ddf9e69`](https://github.com/IoT-Smart-Hydroponic/learning/commit/ddf9e6933f77279e214e5a7e0c8e97476d13bb64))
+
+
 ## v1.6.0 (2026-02-15)
 
 ### Features
