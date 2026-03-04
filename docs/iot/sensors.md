@@ -13,3 +13,9 @@ Sensor DHT11 merupakan sensor digital yang digunakan untuk mengukur suhu dan kel
 ![Soil Moisture Sensor](../images/soil_moisture_sensor.png)
 
 Soil moisture (kelembaban tanah) adalah jumlah air yang terkandung dalam pori-pori tanah, yang sangat penting untuk pertumbuhan tanaman, ekologi, dan hidrologi, diukur dengan sensor untuk menentukan kapan waktu menyiram atau memantau kondisi tanah secara akurat
+
+## Ultrasonic Sensor
+
+![Ultrasonic Sensor](../images/ultrasonic_sensor.png)
+
+Sensor ultrasonik adalah perangkat yang menggunakan gelombang suara frekuensi tinggi untuk mengukur jarak antara sensor dan objek di depannya.

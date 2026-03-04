@@ -9,7 +9,7 @@ Alat-alat:
 - [Buzzer](actuators.md#buzzer)
 
 ```cpp
---8<-- "code/pemantau_suhu.ino"
+--8<-- "code/ino/pemantau_suhu.ino"
 ```
 
 ## Rangkaian Kontrol Aktuator Dengan Relay
@@ -21,7 +21,7 @@ Alat-alat:
 - [Pompa DC](actuators.md#pompa-dc)
 
 ```cpp
---8<-- "code/kontrol_aktuator_relay_pompa.ino"
+--8<-- "code/ino/kontrol_aktuator_relay_pompa.ino"
 ```
 
 ## Rangkaian Kontrol Aktuator Pompa DC Dengan Relay
@@ -34,5 +34,17 @@ Alat-alat:
 - [Moisture Sensor](sensors.md#soil-moisture-sensor)
 
 ```cpp
---8<-- "code/aktuator_relay_pompa_moisture.ino"
+--8<-- "code/ino/aktuator_relay_pompa_moisture.ino"
+```
+
+## Rangkaian Sensor Ultrasonic dan Buzzer
+
+Alat-alat:
+
+- [ESP32](microcontrollers.md#esp32)
+- [Sensor Ultrasonic](sensors.md#ultrasonic-sensor)
+- [Buzzer](actuators.md#buzzer)
+
+```cpp
+--8<-- "code/ino/buzzer_ultrasonic.ino"
 ```
