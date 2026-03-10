@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v1.8.0 (2026-03-10)
+
+### Features
+
+- New hands-on of sending sensor and buzzer data
+  ([#14](https://github.com/IoT-Smart-Hydroponic/learning/pull/14),
+  [`aea32b8`](https://github.com/IoT-Smart-Hydroponic/learning/commit/aea32b899922159e282ae7617dde975e0c4c54f3))
+
+
 ## v1.7.0 (2026-03-04)
 
 ### Features
