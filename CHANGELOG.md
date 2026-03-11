@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v1.9.0 (2026-03-11)
+
+### Features
+
+- Add Python client scripts for data retrieval, update hands-on documentation
+  ([#15](https://github.com/IoT-Smart-Hydroponic/learning/pull/15),
+  [`03d0b25`](https://github.com/IoT-Smart-Hydroponic/learning/commit/03d0b25797b8be63fd64bafccc99dcfe54fa0f17))
+
+
 ## v1.8.0 (2026-03-10)
 
 ### Features
