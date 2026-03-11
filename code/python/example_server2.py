@@ -69,7 +69,7 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
         else:
             self.send_error(404)
 
-def run(server_class=HTTPServer, handler_class=SimpleHTTPRequestHandler, port=5000):
+def run(server_class=HTTPServer, handler_class=SimpleHTTPRequestHandler, port=5000): # Ubah port jika tidak bisa digunakan
     server_address = ('', port)
     httpd = server_class(server_address, handler_class)
 
