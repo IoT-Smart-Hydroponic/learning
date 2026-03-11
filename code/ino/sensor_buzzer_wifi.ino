@@ -6,7 +6,7 @@ const char *ssid = "Nama_wifi";
 const char *password = "password";
 
 // ----- SERVER -----
-const char *serverURL = "http://ip-device:5000/data";
+const char *serverURL = "http://ip-device:5000/data"; // Ubah dengan URL dan port server yang sesuai
 
 // ----- DEVICE ID -----
 const char *device_id = "IoT-1";

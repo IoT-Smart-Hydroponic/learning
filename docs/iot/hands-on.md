@@ -62,7 +62,7 @@ Alat-alat:
 - [Buzzer](actuators.md#buzzer)
 
 ??? example "Kode program untuk ESP32"
-    ```cpp 
+    ```cpp
     --8<-- "code/ino/sensor_buzzer_wifi.ino"
     ```
 
@@ -74,4 +74,14 @@ Alat-alat:
 ??? example "Kode program untuk server (Python) dengan penyimpanan data ke database PostgreSQL"
     ```python
     --8<-- "code/python/example_postgres_server.py"
+    ```
+
+??? example "Kode program untuk client (Python) untuk mengambil data dari server"
+    ```python
+    --8<-- "code/python/example_client_get.py"
+    ```
+
+??? example "Kode program untuk client (Python) untuk mengirim data ke server"
+    ```python
+    --8<-- "code/python/example_client_post.py"
     ```
