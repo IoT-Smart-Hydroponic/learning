@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v1.9.1 (2026-03-11)
+
+### Bug Fixes
+
+- Query for creates device_id column on database and select query
+  ([#16](https://github.com/IoT-Smart-Hydroponic/learning/pull/16),
+  [`9ae6d37`](https://github.com/IoT-Smart-Hydroponic/learning/commit/9ae6d37acce835685568e675a17de8a64508b199))
+
+
 ## v1.9.0 (2026-03-11)
 
 ### Features
