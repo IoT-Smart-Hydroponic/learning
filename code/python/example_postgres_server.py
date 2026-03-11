@@ -6,14 +6,14 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 import psycopg2
 from dotenv import load_dotenv
 
-load_dotenv() # Memuat variabel lingkungan dari file .env
+load_dotenv()  # Memuat variabel lingkungan dari file .env
 
 connection = psycopg2.connect(
     host="localhost",
     port=5432,
     database="mahasiswa_db",
     user="postgres",
-    password=os.environ.get("password")
+    password=os.environ.get("password"),
 )
 
 # Membuat tabel jika belum ada.
@@ -21,21 +21,21 @@ with connection.cursor() as cursor:
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS data_sensor (
             id SERIAL PRIMARY KEY,
+            device_id VARCHAR(50) DEFAULT 'ESP32',
             waktu TIMESTAMP,
             jarak INTEGER,
             buzzer INTEGER
         )
     """)
-connection.commit() # Commit untuk menyimpan perubahan ke database
+connection.commit()  # Commit untuk menyimpan perubahan ke database
+
 
 class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
-    # CORS headers untuk mengizinkan akses dari domain lain (misal: frontend di localhost:3000)
     def _set_cors_headers(self):
-        self.send_header('Access-Control-Allow-Origin', '*')
-        self.send_header('Access-Control-Allow-Methods', '*')
-        self.send_header('Access-Control-Allow-Headers', 'Content-Type')
+        self.send_header("Access-Control-Allow-Origin", "*")
+        self.send_header("Access-Control-Allow-Methods", "*")
+        self.send_header("Access-Control-Allow-Headers", "Content-Type")
 
-    # OPTIONS: Untuk menangani preflight request dari browser saat melakukan CORS
     def do_OPTIONS(self):
         self.send_response(204)
         self._set_cors_headers()
@@ -43,10 +43,10 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
 
     # ===== GET : tampilkan data =====
     def do_GET(self):
-        if self.path == '/':
+        if self.path == "/":
             self.send_response(200)
             self._set_cors_headers()
-            self.send_header('Content-type', 'text/html')
+            self.send_header("Content-type", "text/html")
             self.end_headers()
             html_content = """
                 <html>
@@ -57,13 +57,13 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
                     </body>
                 </html>
             """
-            self.wfile.write(html_content.encode('utf-8'))
-        elif self.path == '/tampil-data':
+            self.wfile.write(html_content.encode("utf-8"))
+        elif self.path == "/tampil-data":
             try:
                 with connection.cursor() as cursor:
                     cursor.execute(
                         """
-                        SELECT id, waktu, jarak, buzzer
+                        SELECT id, device_id, waktu, jarak, buzzer
                         FROM data_sensor
                         ORDER BY id DESC
                         """
@@ -73,23 +73,26 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
                 payload = [
                     {
                         "id": row[0],
-                        "waktu": row[1].strftime("%Y-%m-%d %H:%M:%S") if row[1] else None,
-                        "jarak": row[2],
-                        "buzzer": row[3],
+                        "device_id": row[1],
+                        "waktu": row[2].strftime("%Y-%m-%d %H:%M:%S")
+                        if row[2]
+                        else None,
+                        "jarak": row[3],
+                        "buzzer": row[4],
                     }
                     for row in rows
                 ]
 
                 self.send_response(200)
                 self._set_cors_headers()
-                self.send_header('Content-type', 'application/json')
+                self.send_header("Content-type", "application/json")
                 self.end_headers()
-                self.wfile.write(json.dumps(payload).encode('utf-8'))
+                self.wfile.write(json.dumps(payload).encode("utf-8"))
             except Exception as e:
                 print("Error GET:", e)
                 self.send_response(500)
                 self._set_cors_headers()
-                self.send_header('Content-type', 'application/json')
+                self.send_header("Content-type", "application/json")
                 self.end_headers()
                 self.wfile.write(b'{"status":"error","message":"Gagal mengambil data"}')
         else:
@@ -97,52 +100,52 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
 
     # ===== POST : menerima data dari ESP32 =====
     def do_POST(self):
-
-        if self.path == '/data':
-
-            content_length = int(self.headers['Content-Length'])
+        if self.path == "/data":
+            content_length = int(self.headers["Content-Length"])
             post_data = self.rfile.read(content_length)
 
             try:
-                data = json.loads(post_data.decode('utf-8'))
-
-                # Mengambil data jarak dan buzzer dari payload JSON
-                jarak = data.get('jarak')
-                buzzer = data.get('buzzer')
+                data = json.loads(post_data.decode("utf-8"))
+                device_id = data.get(
+                    "device_id", "ESP32"
+                )  # Default ke 'ESP32' jika tidak ada
+                jarak = data.get("jarak")
+                buzzer = data.get("buzzer")
 
                 if jarak is None or buzzer is None:
                     self.send_response(400)
                     self._set_cors_headers()
-                    self.send_header('Content-type', 'application/json')
+                    self.send_header("Content-type", "application/json")
                     self.end_headers()
-                    self.wfile.write(b'{"status":"error","message":"Field jarak dan buzzer wajib diisi"}')
+                    self.wfile.write(
+                        b'{"status":"error","message":"Field jarak dan buzzer wajib diisi"}'
+                    )
                     return
 
                 jarak = int(jarak)
                 buzzer = int(buzzer)
 
-                # Mengambil waktu saat data diterima dan menyimpannya ke database
                 waktu_obj = datetime.now()
                 waktu = waktu_obj.strftime("%Y-%m-%d %H:%M:%S")
 
                 with connection.cursor() as cursor:
                     cursor.execute(
-                        "INSERT INTO data_sensor (waktu, jarak, buzzer) VALUES (%s, %s, %s)",
-                        (waktu_obj, jarak, buzzer)
+                        "INSERT INTO data_sensor (device_id, waktu, jarak, buzzer) VALUES (%s, %s, %s, %s)",
+                        (device_id, waktu_obj, jarak, buzzer),
                     )
                 connection.commit()
 
-                print(f"[{waktu}] Jarak: {jarak} cm | Buzzer: {buzzer}")
+                print(
+                    f"[{waktu}] Device ID: {device_id} | Jarak: {jarak} cm | Buzzer: {buzzer}"
+                )
 
-                # Mengirim respons sukses ke ESP32
-                self.send_response(200)
+                self.send_response(201)
                 self._set_cors_headers()
-                self.send_header('Content-type', 'application/json')
+                self.send_header("Content-type", "application/json")
                 self.end_headers()
 
                 self.wfile.write(b'{"status":"success"}')
 
-            # Jika gagal maka rollback transaksi dan kirim respons error ke ESP32
             except Exception as e:
                 connection.rollback()
 
@@ -150,17 +153,18 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
 
                 self.send_response(400)
                 self._set_cors_headers()
-                self.send_header('Content-type', 'application/json')
+                self.send_header("Content-type", "application/json")
                 self.end_headers()
-                self.wfile.write(b'{"status":"error","message":"Data tidak valid atau gagal disimpan"}')
+                self.wfile.write(
+                    b'{"status":"error","message":"Data tidak valid atau gagal disimpan"}'
+                )
 
         else:
             self.send_error(404)
 
 
-def run(server_class=HTTPServer, handler_class=SimpleHTTPRequestHandler, port=5001): # Ubah port jika tidak bisa digunakan
-
-    server_address = ('', port)
+def run(server_class=HTTPServer, handler_class=SimpleHTTPRequestHandler, port=5001):
+    server_address = ("", port)
     httpd = server_class(server_address, handler_class)
 
     print(f"Server HTTP berjalan di port {port}")
@@ -175,5 +179,5 @@ def run(server_class=HTTPServer, handler_class=SimpleHTTPRequestHandler, port=50
         connection.close()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     run()
