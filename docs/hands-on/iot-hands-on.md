@@ -4,9 +4,9 @@
 
 Alat-alat:
 
-- [ESP32](microcontrollers.md#esp32)
-- [Sensor DHT11](sensors.md#sensor-dht11)
-- [Buzzer](actuators.md#buzzer)
+- [ESP32](../iot/microcontrollers.md#esp32)
+- [Sensor DHT11](../iot/sensors.md#sensor-dht11)
+- [Buzzer](../iot/actuators.md#buzzer)
 
 ??? example "Kode program untuk ESP32"
     ```cpp
@@ -17,9 +17,9 @@ Alat-alat:
 
 Alat-alat:
 
-- [ESP32](microcontrollers.md#esp32)
-- [Relay](actuators.md#relay)
-- [Pompa DC](actuators.md#pompa-dc)
+- [ESP32](../iot/microcontrollers.md#esp32)
+- [Relay](../iot/actuators.md#relay)
+- [Pompa DC](../iot/actuators.md#pompa-dc)
 
 ??? example "Kode program untuk ESP32"
     ```cpp
@@ -30,10 +30,10 @@ Alat-alat:
 
 Alat-alat:
 
-- [ESP32](microcontrollers.md#esp32)
-- [Relay](actuators.md#relay)
-- [Pompa DC](actuators.md#pompa-dc)
-- [Moisture Sensor](sensors.md#soil-moisture-sensor)
+- [ESP32](../iot/microcontrollers.md#esp32)
+- [Relay](../iot/actuators.md#relay)
+- [Pompa DC](../iot/actuators.md#pompa-dc)
+- [Moisture Sensor](../iot/sensors.md#soil-moisture-sensor)
 
 ??? example "Kode program untuk ESP32"
     ```cpp
@@ -44,9 +44,9 @@ Alat-alat:
 
 Alat-alat:
 
-- [ESP32](microcontrollers.md#esp32)
-- [Sensor Ultrasonic](sensors.md#ultrasonic-sensor)
-- [Buzzer](actuators.md#buzzer)
+- [ESP32](../iot/microcontrollers.md#esp32)
+- [Sensor Ultrasonic](../iot/sensors.md#ultrasonic-sensor)
+- [Buzzer](../iot/actuators.md#buzzer)
 
 ??? example "Kode program untuk ESP32"
     ```cpp
@@ -57,9 +57,9 @@ Alat-alat:
 
 Alat-alat:
 
-- [ESP32](microcontrollers.md#esp32)
-- [Sensor Ultrasonic](sensors.md#ultrasonic-sensor)
-- [Buzzer](actuators.md#buzzer)
+- [ESP32](../iot/microcontrollers.md#esp32)
+- [Sensor Ultrasonic](../iot/sensors.md#ultrasonic-sensor)
+- [Buzzer](../iot/actuators.md#buzzer)
 
 ??? example "Kode program untuk ESP32"
     ```cpp
@@ -84,4 +84,17 @@ Alat-alat:
 ??? example "Kode program untuk client (Python) untuk mengirim data ke server"
     ```python
     --8<-- "code/python/example_client_post.py"
+    ```
+
+## Blynk Sensor Ultrasonic dan Buzzer
+
+Alat-alat:
+
+- [ESP32](../iot/microcontrollers.md#esp32)
+- [Sensor Ultrasonic](../iot/sensors.md#ultrasonic-sensor)
+- [Buzzer](../iot/actuators.md#buzzer)
+
+??? example "Kode program untuk ESP32"
+    ```cpp
+    --8<-- "code/ino/blynk_buzzer_ultrasonic.ino"
     ```
