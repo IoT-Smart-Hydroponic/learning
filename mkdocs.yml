@@ -49,7 +49,6 @@ nav:
       - Sensors: iot/sensors.md
       - Microcontrollers: iot/microcontrollers.md
       - Actuators: iot/actuators.md
-      - Hands on: iot/hands-on.md
   - Protocol:
       - Overview: protocol/overview.md
   - Version Control:
@@ -68,6 +67,10 @@ nav:
       - Overview: database/overview.md
   - AI:
       - Overview: ai/overview.md
+  - Hands-on:
+      - Overview: hands-on/overview.md
+      - IoT Hands-on: hands-on/iot-hands-on.md
+      - Dashboard Hands-on: hands-on/dashboard-hands-on.md
   - Deployment:
       - Overview: deployment/overview.md
   - Contribute: guide.md
