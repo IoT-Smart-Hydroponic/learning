@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v1.10.0 (2026-04-01)
+
+### Features
+
+- Integrasi blynk dengan ESP32 ([#17](https://github.com/IoT-Smart-Hydroponic/learning/pull/17),
+  [`84280af`](https://github.com/IoT-Smart-Hydroponic/learning/commit/84280afcc801f56278e0f23eca23747fdc702af3))
+
+
 ## v1.9.1 (2026-03-11)
 
 ### Bug Fixes
