@@ -1,10 +1,6 @@
-# Hands-On Dashboard
+# Dashboard Hands-on
 
-## Dashboard Sensor Ultrasonic dan Buzzer
+!!! info "Coming Soon"
+    Modul ini sedang disusun. Nantikan update selanjutnya! 🚀
 
-Kebutuhan:
-
-- [ESP32](../iot/microcontrollers.md#esp32)
-- [Sensor Ultrasonic](../iot/sensors.md#ultrasonic-sensor)
-- [Buzzer](../iot/actuators.md#buzzer)
-- [Server (Python)](../hands-on/iot-hands-on.md#rangkaian-sensor-ultrasonic-buzzer-dan-penyimpanan-data-di-server)
+    [Kembali ke Home](../index.md)
