@@ -71,6 +71,7 @@ nav:
       - Overview: hands-on/overview.md
       - IoT Hands-on: hands-on/iot-hands-on.md
       - Dashboard Hands-on: hands-on/dashboard-hands-on.md
+      - MQTT Hands-on: hands-on/mqtt-hands-on.md
   - Deployment:
       - Overview: deployment/overview.md
   - Contribute: guide.md
