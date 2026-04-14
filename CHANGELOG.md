@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v1.11.0 (2026-04-14)
+
+### Features
+
+- MQTT Protocol for ESP32 ([#18](https://github.com/IoT-Smart-Hydroponic/learning/pull/18),
+  [`38a1a16`](https://github.com/IoT-Smart-Hydroponic/learning/commit/38a1a169eea47a7dd97791d999020fe279d3d808))
+
+
 ## v1.10.0 (2026-04-01)
 
 ### Features
