@@ -4,7 +4,7 @@
 
 Alat-alat:
 
-- [ESP32](../iot/microcontrollers.md#esp32)
+- [ESP32](../iot/microcontrollers.md#esp32-devkit-v1)
 - [Sensor DHT11](../iot/sensors.md#sensor-dht11)
 - [Buzzer](../iot/actuators.md#buzzer)
 
@@ -17,9 +17,9 @@ Alat-alat:
 
 Alat-alat:
 
-- [ESP32](../iot/microcontrollers.md#esp32)
-- [Relay](../iot/actuators.md#relay)
-- [Pompa DC](../iot/actuators.md#pompa-dc)
+- [ESP32](../iot/microcontrollers.md#esp32-devkit-v1)
+- [Relay](../iot/actuators.md#relay-module)
+- [Pompa DC](../iot/actuators.md#pompa-dc-mini-submersible-water-pump)
 
 ??? example "Kode program untuk ESP32"
     ```cpp
@@ -30,9 +30,9 @@ Alat-alat:
 
 Alat-alat:
 
-- [ESP32](../iot/microcontrollers.md#esp32)
-- [Relay](../iot/actuators.md#relay)
-- [Pompa DC](../iot/actuators.md#pompa-dc)
+- [ESP32](../iot/microcontrollers.md#esp32-devkit-v1)
+- [Relay](../iot/actuators.md#relay-module)
+- [Pompa DC](../iot/actuators.md#pompa-dc-mini-submersible-water-pump)
 - [Moisture Sensor](../iot/sensors.md#soil-moisture-sensor)
 
 ??? example "Kode program untuk ESP32"
@@ -44,8 +44,8 @@ Alat-alat:
 
 Alat-alat:
 
-- [ESP32](../iot/microcontrollers.md#esp32)
-- [Sensor Ultrasonic](../iot/sensors.md#ultrasonic-sensor)
+- [ESP32](../iot/microcontrollers.md#esp32-devkit-v1)
+- [Sensor Ultrasonic](../iot/sensors.md#ultrasonic-sensor-hc-sr04)
 - [Buzzer](../iot/actuators.md#buzzer)
 
 ??? example "Kode program untuk ESP32"
@@ -57,8 +57,8 @@ Alat-alat:
 
 Alat-alat:
 
-- [ESP32](../iot/microcontrollers.md#esp32)
-- [Sensor Ultrasonic](../iot/sensors.md#ultrasonic-sensor)
+- [ESP32](../iot/microcontrollers.md#esp32-devkit-v1)
+- [Sensor Ultrasonic](../iot/sensors.md#ultrasonic-sensor-hc-sr04)
 - [Buzzer](../iot/actuators.md#buzzer)
 
 ??? example "Kode program untuk ESP32"
@@ -90,8 +90,8 @@ Alat-alat:
 
 Alat-alat:
 
-- [ESP32](../iot/microcontrollers.md#esp32)
-- [Sensor Ultrasonic](../iot/sensors.md#ultrasonic-sensor)
+- [ESP32](../iot/microcontrollers.md#esp32-devkit-v1)
+- [Sensor Ultrasonic](../iot/sensors.md#ultrasonic-sensor-hc-sr04)
 - [Buzzer](../iot/actuators.md#buzzer)
 
 ??? example "Kode program untuk ESP32"
