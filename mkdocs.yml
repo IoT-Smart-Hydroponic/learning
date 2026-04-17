@@ -51,6 +51,10 @@ nav:
       - Actuators: iot/actuators.md
   - Protocol:
       - Overview: protocol/overview.md
+      - HTTP Basics: protocol/http.md
+      - MQTT Basics: protocol/mqtt.md
+      - WebSocket Basics: protocol/websocket.md
+      - CoAP Basics: protocol/coap.md
   - Version Control:
       - Overview: version-control/overview.md
       - Git Introduction: version-control/git-introduction.md
@@ -74,6 +78,9 @@ nav:
       - MQTT Hands-on: hands-on/mqtt-hands-on.md
   - Deployment:
       - Overview: deployment/overview.md
+      - Linux Basics for Deployment: deployment/linux-basics.md
+      - Docker and Container Basics: deployment/docker-container.md
+      - NGINX Basics for Reverse Proxy: deployment/nginx-basics.md
   - Contribute: guide.md
 
 markdown_extensions:
