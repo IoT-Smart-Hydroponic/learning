@@ -2,6 +2,33 @@
 
 <!-- version list -->
 
+## v1.12.0 (2026-05-06)
+
+### Bug Fixes
+
+- **docs**: Enhance contribution guidelines with rebase instructions
+  ([`6d3658c`](https://github.com/IoT-Smart-Hydroponic/learning/commit/6d3658c50413cc550a057d200c48efff90edb3e2))
+
+- **iot-docs**: Normalize formatting and repair hands-on anchors
+  ([`91dc6c1`](https://github.com/IoT-Smart-Hydroponic/learning/commit/91dc6c125a6b7aaa0bb65d3c12693eb5ef6dc114))
+
+### Documentation
+
+- Update learning content and site config
+  ([`1bdfe31`](https://github.com/IoT-Smart-Hydroponic/learning/commit/1bdfe3175d90e42d24b9a1b238f94efa622eff2a))
+
+### Features
+
+- **deployment**: Add beginner deployment modules and split docker content
+  ([`cb786c0`](https://github.com/IoT-Smart-Hydroponic/learning/commit/cb786c011b55518bae27ec5788bbb2e3c434e919))
+
+- **docs-nav**: Update navigation for protocol and deployment modules
+  ([`24b2d3f`](https://github.com/IoT-Smart-Hydroponic/learning/commit/24b2d3ffc5ac88fbda486df403a4f112ae8d5292))
+
+- **protocol**: Add HTTP MQTT WebSocket and CoAP documentation
+  ([`b9cc5c3`](https://github.com/IoT-Smart-Hydroponic/learning/commit/b9cc5c37a1212e90772e79cd84bc8e68d366f258))
+
+
 ## v1.11.0 (2026-04-14)
 
 ### Features
