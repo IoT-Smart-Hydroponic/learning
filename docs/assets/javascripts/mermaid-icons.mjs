@@ -46,6 +46,19 @@ mermaid.registerIconPacks([
     {
         name: 'material-symbols', 
         loader: createLoader('material-symbols', 'material-symbols')
+    },
+    {
+        name: 'logos', 
+        loader: createLoader('logos', 'logos')
+    },
+    {
+        name: "boxicons",
+        loader: createLoader('boxicons', 'boxicons')
+    },
+    {
+        name: "ic",
+        loader: createLoader('ic', 'ic')
+
     }
 ]);
 
