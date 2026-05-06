@@ -65,12 +65,16 @@ nav:
       - Remote Repositories: version-control/remote-repositories.md  
   - Backend:
       - Overview: backend/overview.md
+      - Fundamental: backend/fundamental.md
   - Frontend:
       - Overview: frontend/overview.md
+      - Fundamental: frontend/fundamental.md
   - Database:
       - Overview: database/overview.md
+      - Fundamental: database/fundamental.md
   - AI:
       - Overview: ai/overview.md
+      - Fundamental: ai/fundamental.md
   - Hands-on:
       - Overview: hands-on/overview.md
       - IoT Hands-on: hands-on/iot-hands-on.md
@@ -106,5 +110,8 @@ markdown_extensions:
   - pymdownx.snippets:
       dedent_subsections: true
 
+plugins: 
+  - search
+
 extra_javascript:
-  - utils/mermaid-icons.mjs
+  - assets/javascripts/mermaid-icons.mjs
