@@ -5,8 +5,7 @@ description = "Repository untuk belajar terkait bidang Artificial Intelligence d
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
-    "mkdocs-material>=9.7.1",
-    "mkdocs-mermaid-zoom>=0.1.0",
+    "zensical>=0.0.43",
 ]
 
 [dependency-groups]

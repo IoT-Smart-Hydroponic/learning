@@ -21,7 +21,7 @@ Repositori: [Repo belajar](https://github.com/IoT-Smart-Hydroponic/learning)
 Modul ini dibuat untuk membantu Kamu memahami konsep-konsep dasar dan lanjutan dalam AIoT. Setiap bagian modul dirancang untuk memberikan pengetahuan praktis yang dapat langsung diterapkan dalam proyek-proyek nyata. Kami berharap modul ini dapat menjadi sumber belajar yang bermanfaat bagi Kamu yang tertarik dalam bidang AIoT. Selamat belajar! 🚀
 
 !!! tip "Tips Belajar"
-    Kamu tidak perlu menguasai semua modul sekaligus. Pilihlah modul yang paling sesuai dengan kebutuhan proyek dan minat Kamu. (Kalau bisa sih semuanya 😄)
+    Kamu tidak perlu menguasai semua modul sekaligus. Pilihlah modul yang paling sesuai dengan kebutuhan proyek dan minat Kamu.
 
     Jika Kamu memiliki pertanyaan atau butuh bantuan, jangan ragu untuk bertanya dan berdiskusi ya! Feel free to ask us anytime.
 

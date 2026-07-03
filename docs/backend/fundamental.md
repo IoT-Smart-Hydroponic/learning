@@ -1,6 +1,10 @@
-# Backend Fundamental
+# Python Fundamental untuk Backend
 
-Sebelum memasuki pengenalan FastAPI, halaman ini akan membahas dasar-dasar pemrograman Python yang relevan untuk pengembangan backend, termasuk konsep typing dan async yang akan sering digunakan dalam implementasi API.
+Sebelum masuk ke FastAPI, halaman ini membahas dasar Python yang sering muncul saat membuat backend.
+
+Kamu tidak harus menguasai semua fitur Python. Untuk mulai membuat API, cukup pahami bagian yang sering dipakai: variabel, fungsi, collection, error handling, typing, dan async dasar.
+
+Setelah halaman ini, lanjutkan ke [OOP Python untuk Backend](oop-python.md) agar kamu lebih siap membaca class Pydantic, model database, dan service di proyek backend.
 
 ## Pengenalan Python untuk Backend
 
