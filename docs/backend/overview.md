@@ -2,12 +2,19 @@
 
 Halaman backend berisi jalur belajar terkait pengembangan layanan API untuk sistem AIoT, mulai dari fundamental hingga integrasi lanjutan.
 
-## Gambaran Topik
+Backend adalah bagian yang menerima data, memproses aturan aplikasi, lalu mengirim response. Dalam AIoT, backend sering menjadi penghubung antara device, database, dashboard, dan layanan AI.
 
-- Dasar API dengan FastAPI
-- Validasi request dan response
-- Error handling dan HTTP status code
-- Integrasi backend dengan database dan AI service
+## Alur Besar
+
+```mermaid
+flowchart LR
+    A["Device atau dashboard"] --> B["Backend API"]
+    B --> C["Validasi data"]
+    C --> D["Logic aplikasi"]
+    D --> E["Database atau service lain"]
+    E --> F["Response JSON"]
+    F --> A
+```
 
 ## Prasyarat
 
@@ -15,78 +22,36 @@ Halaman backend berisi jalur belajar terkait pengembangan layanan API untuk sist
 - Dasar terminal dan virtual environment
 - Paham konsep JSON dasar
 
+## Urutan Belajar yang Disarankan
+
+1. [Python Fundamental](fundamental.md)
+2. [OOP Python untuk Backend](oop-python.md)
+3. [API dengan FastAPI](api-fastapi.md)
+4. [Struktur Proyek Backend](project-structure.md)
+5. [Backend Mini](../hands-on/backend-mini.md)
+
 ## Capaian Belajar
 
-- Menjalankan server FastAPI secara lokal
-- Membuat endpoint GET dan POST
-- Melakukan validasi input sederhana dengan Pydantic
-- Menangani error dasar dan status code HTTP
+- Menjalankan server FastAPI secara lokal.
+- Membuat endpoint `GET` dan `POST`.
+- Melakukan validasi input sederhana dengan Pydantic.
+- Membaca struktur folder backend tanpa panik.
+- Menangani error dasar dan status code HTTP.
 
-## Cakupan Fundamental
+## Pembagian Section
 
-- Python relevan backend (typing, async dasar)
-- FastAPI routing, validation, error handling
-- HTTP dan status code
+| Section | Fokus |
+| --- | --- |
+| Python Fundamental | bahasa Python yang sering muncul di backend |
+| OOP Python | class, object, method, dan pola class di backend |
+| API dengan FastAPI | endpoint, request, response, validasi |
+| Struktur Proyek Backend | cara membaca folder backend yang lebih besar |
+| Backend Mini | quick win membuat API kecil |
 
-## Format Materi di Halaman Ini
+## Tips Membaca
 
-Halaman fundamental ini bukan hanya plan. Struktur materi di bawah berisi:
+Jangan mulai dari semua file sekaligus.
 
-- Ringkasan konsep inti
-- Langkah praktik (hands-on) yang bisa langsung dijalankan
-- Error umum dan cara debug
-- Checklist hasil akhir
-
-## Materi Inti
-
-### 1. Setup Project FastAPI
-
-- Buat virtual environment
-- Install fastapi dan uvicorn
-- Jalankan server dengan perintah `uvicorn main:app --reload`
-
-### 2. Endpoint Dasar
-
-- GET /health untuk health check
-- POST /sensor untuk menerima data sensor (`device_id`, `value`, `timestamp`)
-- Kembalikan response JSON yang konsisten
-
-### 3. Validasi dan Error Handling
-
-- Gunakan model Pydantic untuk validasi payload
-- Pahami error 422 Unprocessable Entity
-- Gunakan status code sesuai kebutuhan (200, 201, 400, 500)
-
-### 4. Uji API
-
-- Coba endpoint melalui browser, curl, atau Postman
-- Verifikasi response body dan status code
-
-## Hands-on
-
-1. Buat file `main.py` dan inisialisasi FastAPI.
-2. Tambahkan endpoint GET /health.
-3. Tambahkan model payload sensor dengan Pydantic.
-4. Tambahkan endpoint POST /sensor.
-5. Uji beberapa skenario: payload benar, field kurang, tipe data salah.
-
-## Error Umum dan Debug
-
-- Port dipakai proses lain: jalankan di port lain, contoh `--port 8001`
-- ModuleNotFoundError: aktifkan virtual environment sebelum menjalankan app
-- Request gagal validasi: cek nama field dan tipe data payload
-
-## Checklist Selesai
-
-- API berjalan stabil di lokal
-- Endpoint health check merespons dengan benar
-- Endpoint sensor menerima payload valid
-- Memahami beda error client (4xx) dan server (5xx)
-
-## Daftar Halaman (Path)
-
-- [Overview](overview.md)
-- [Fundamental](fundamental.md)
-
+Mulai dari satu endpoint sederhana, lalu ikuti alurnya: route, schema, service, database.
 
 [Kembali ke Home](../index.md)

@@ -1,5 +1,8 @@
 # AI Fundamental
 
+!!! Note
+    Halaman ini sedang dalam tahap pengembangan. Materi dan struktur masih bisa berubah seiring dengan feedback, kebutuhan peserta, dan kebutuhan proyek.
+
 ## Tujuan
 
 Membekali peserta dengan pemahaman dasar AI berbasis data sensor: memilih use case, menyiapkan data, dan membuat baseline model atau rule sederhana.

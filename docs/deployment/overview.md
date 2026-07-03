@@ -16,6 +16,7 @@ Contoh hal yang biasanya dideploy:
 ## Cakupan modul Deployment
 
 - Linux basics: fondasi command line dan operasi server.
+- SSH basics: cara masuk ke server/VPS dari laptop dengan aman.
 - Docker and Container: konsep dan praktik menjalankan service dalam container.
 - NGINX basics: reverse proxy untuk mempublikasikan aplikasi.
 
@@ -37,14 +38,16 @@ flowchart LR
 Singkatnya, deployment adalah jembatan dari "aplikasi jalan lokal" ke "aplikasi siap dipakai". Untuk memahami deployment, sebaiknya mulai dari dasar-dasarnya dulu dengan urutan sebagai berikut:
 
 - Linux Basics for Deployment
+- SSH Basics untuk Deployment
 - Docker and Container Basics
 - NGINX Basics for Reverse Proxy
 
-Mengapa demikian? Karena Container sendiri berjalan di atas Linux dan NGINX biasanya dipakai untuk mempublikasikan aplikasi yang sudah dideploy. Jadi memahami ketiganya secara berurutan akan memberikan gambaran yang lebih utuh tentang proses deployment AIoT.
+Mengapa demikian? Karena server deployment biasanya diakses lewat SSH, container berjalan di atas Linux, dan NGINX biasanya dipakai untuk mempublikasikan aplikasi yang sudah dideploy. Jadi memahami urutannya akan memberikan gambaran yang lebih utuh tentang proses deployment AIoT.
 
 Lanjut ke materi Docker and Container di halaman berikut:
 
 - [Linux Basics for Deployment](linux-basics.md)
+- [SSH Basics untuk Deployment](ssh-basics.md)
 - [Docker and Container Basics](docker-container.md)
 - [NGINX Basics for Reverse Proxy](nginx-basics.md)
 

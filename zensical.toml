@@ -1,0 +1,139 @@
+[project]
+site_name = "AIoT Learning Hub"
+site_description = "Modul belajar AIoT berbasis tugas mini, quick wins, dan jembatan ke proyek Smart Hydroponic"
+site_author = "KSM AIoT"
+site_url = "https://iot-smart-hydroponic.github.io/learning/"
+repo_url = "https://github.com/IoT-Smart-Hydroponic/learning/"
+repo_name = "learning"
+copyright = "Copyright &copy; 2026 Kelompok Studi Mahasiswa AIoT"
+
+nav = [
+  { "Home" = "index.md" },
+  { "Getting Started" = [
+    { "Overview" = "getting-started/overview.md" },
+    { "Installation Tools" = "getting-started/arduino-ide.md" },
+  ] },
+  { "IoT" = [
+    { "Overview" = "iot/overview.md" },
+    { "Sensors" = "iot/sensors.md" },
+    { "Microcontrollers" = "iot/microcontrollers.md" },
+    { "Actuators" = "iot/actuators.md" },
+  ] },
+  { "Protocol" = [
+    { "Overview" = "protocol/overview.md" },
+    { "HTTP Basics" = "protocol/http.md" },
+    { "MQTT Basics" = "protocol/mqtt.md" },
+    { "WebSocket Basics" = "protocol/websocket.md" },
+    { "CoAP Basics" = "protocol/coap.md" },
+  ] },
+  { "Version Control" = [
+    { "Overview" = "version-control/overview.md" },
+    { "Git Introduction" = "version-control/git-introduction.md" },
+    { "Git Installation" = "version-control/git-installation.md" },
+    { "Basic Git Commands" = "version-control/basic-git-commands.md" },
+    { "Konsep Branching" = "version-control/branching-concepts.md" },
+    { "Git Conflicts" = "version-control/git-conflict.md" },
+    { "Remote Repositories" = "version-control/remote-repositories.md" },
+  ] },
+  { "Backend" = [
+    { "Overview" = "backend/overview.md" },
+    { "Python Fundamental" = "backend/fundamental.md" },
+    { "OOP Python" = "backend/oop-python.md" },
+    { "API dengan FastAPI" = "backend/api-fastapi.md" },
+    { "Struktur Proyek Backend" = "backend/project-structure.md" },
+  ] },
+  { "Frontend" = [
+    { "Overview" = "frontend/overview.md" },
+    { "Web Basics" = "frontend/web-basics.md" },
+    { "JavaScript dan TypeScript" = "frontend/javascript-typescript.md" },
+    { "Vue Basics" = "frontend/vue-basics.md" },
+    { "Integrasi API" = "frontend/api-integration.md" },
+    { "Fundamental" = "frontend/fundamental.md" },
+  ] },
+  { "Database" = [
+    { "Overview" = "database/overview.md" },
+    { "SQL Basics" = "database/sql-basics.md" },
+    { "Desain Data IoT" = "database/data-modeling.md" },
+    { "Time-Series dan TimescaleDB" = "database/timeseries.md" },
+    { "Fundamental" = "database/fundamental.md" },
+  ] },
+  { "AI" = [
+    { "Overview" = "ai/overview.md" },
+    { "Fundamental" = "ai/fundamental.md" },
+  ] },
+  { "Hands-on" = [
+    { "Overview" = "hands-on/overview.md" },
+    { "Pilih Jalur Pertamamu" = "hands-on/choose-your-path.md" },
+    { "Backend Mini" = "hands-on/backend-mini.md" },
+    { "Database Mini" = "hands-on/database-mini.md" },
+    { "Frontend Mini" = "hands-on/frontend-mini.md" },
+    { "IoT Simulator Mini" = "hands-on/iot-simulator-mini.md" },
+    { "The Bridge" = "hands-on/bridge-to-smart-hydroponic.md" },
+    { "IoT Hands-on" = "hands-on/iot-hands-on.md" },
+    { "Dashboard Hands-on" = "hands-on/dashboard-hands-on.md" },
+    { "MQTT Hands-on" = "hands-on/mqtt-hands-on.md" },
+  ] },
+  { "Deployment" = [
+    { "Overview" = "deployment/overview.md" },
+    { "Linux Basics for Deployment" = "deployment/linux-basics.md" },
+    { "SSH Basics untuk Deployment" = "deployment/ssh-basics.md" },
+    { "Docker and Container Basics" = "deployment/docker-container.md" },
+    { "NGINX Basics for Reverse Proxy" = "deployment/nginx-basics.md" },
+  ] },
+  { "Contribute" = "guide.md" },
+]
+
+extra_javascript = [
+  "assets/javascripts/mermaid-icons.mjs",
+]
+
+[project.theme]
+language = "id"
+features = [
+  "content.code.copy",
+  "content.footnote.tooltips",
+  "navigation.footer",
+  "navigation.sections",
+  "navigation.tabs",
+  "navigation.top",
+  "search.highlight",
+  "search.suggest",
+]
+
+[[project.theme.palette]]
+scheme = "default"
+primary = "indigo"
+accent = "indigo"
+toggle.icon = "material/weather-night"
+toggle.name = "Switch to dark mode"
+
+[[project.theme.palette]]
+scheme = "slate"
+primary = "indigo"
+accent = "indigo"
+toggle.icon = "material/weather-sunny"
+toggle.name = "Switch to light mode"
+
+[project.theme.icon]
+repo = "fontawesome/brands/github"
+
+[project.markdown_extensions.admonition]
+[project.markdown_extensions.footnotes]
+[project.markdown_extensions.toc]
+permalink = true
+
+[project.markdown_extensions.pymdownx.details]
+[project.markdown_extensions.pymdownx.highlight]
+anchor_linenums = true
+line_spans = "__span"
+pygments_lang_class = true
+
+[project.markdown_extensions.pymdownx.inlinehilite]
+[project.markdown_extensions.pymdownx.snippets]
+base_path = ["docs", "code"]
+dedent_subsections = true
+
+[project.markdown_extensions.pymdownx.superfences]
+custom_fences = [
+  { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" },
+]

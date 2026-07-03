@@ -1,5 +1,8 @@
 # Database Fundamental
 
+!!! Note
+    Halaman ini sedang dalam tahap pengembangan. Materi dan struktur masih bisa berubah seiring dengan feedback, kebutuhan peserta, dan kebutuhan proyek.
+
 ## Tujuan
 
 Membekali peserta dengan pondasi database untuk menyimpan data sensor AIoT secara terstruktur menggunakan PostgreSQL.

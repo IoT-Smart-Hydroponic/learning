@@ -2,20 +2,32 @@
 
 Halaman database membahas dasar penyimpanan data sensor AIoT menggunakan PostgreSQL dan pengantar menuju skenario time-series dengan TimescaleDB.
 
-## Gambaran Topik
+Database adalah tempat aplikasi menyimpan catatan. Dalam AIoT, catatan itu biasanya berupa data device, data sensor, riwayat kontrol, dan hasil analisis.
 
-- Dasar SQL untuk data sensor
-- Desain schema tabel
-- Query ringkasan dan agregasi
-- Indeks dasar untuk performa awal
+## Alur Besar
 
-## Daftar Halaman
+```mermaid
+flowchart LR
+    A["Device mengirim data"] --> B["Backend"]
+    B --> C["PostgreSQL"]
+    C --> D["Query ringkasan"]
+    D --> E["Dashboard atau AI"]
+```
 
-- [Overview](overview.md)
-- [Fundamental](fundamental.md)
+## Urutan Belajar yang Disarankan
 
-## Catatan
+1. [SQL Basics](sql-basics.md)
+2. [Desain Data IoT](data-modeling.md)
+3. [Time-Series dan TimescaleDB](timeseries.md)
+4. [Database Fundamental](fundamental.md)
+5. [Database Mini](../hands-on/database-mini.md)
 
-Selesaikan materi Fundamental untuk memastikan data pipeline backend ke database berjalan stabil.
+## Capaian Belajar
+
+- Memahami tabel, baris, kolom, dan query SQL dasar.
+- Mendesain tabel sederhana untuk data sensor.
+- Membaca query `SELECT`, `INSERT`, dan `GROUP BY`.
+- Memahami kenapa waktu penting dalam data IoT.
+- Mengenali kapan TimescaleDB mulai dibutuhkan.
 
 [Kembali ke Home](../index.md)
