@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v1.13.0 (2026-07-03)
+
+### Features
+
+- Add documentation for AIoT learning modules and hands-on exercises
+  ([`cd48977`](https://github.com/IoT-Smart-Hydroponic/learning/commit/cd489776cff484c89f8b585092e18fbd65aaeaf7))
+
+
 ## v1.12.0 (2026-05-06)
 
 ### Bug Fixes
